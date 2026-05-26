@@ -13,10 +13,7 @@
       },
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
-      "position": [
-        -160,
-        -16
-      ],
+      "position": [-160, -16],
       "id": "be99c352-2853-4720-8027-9b6e69ecb036",
       "name": "Schedule Trigger"
     },
@@ -33,17 +30,14 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
-      "position": [
-        80,
-        -64
-      ],
+      "position": [80, -64],
       "id": "a4f9554e-353d-4cc7-8a81-932f34c9776c",
       "name": "HTTP Request"
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://discord.com/api/webhooks/1508899840564658220/-xLSt8rX80ra0ClZ7Nm6bKkNyGac6iIfQmFKKzTx90XsqMg2q-Jv_RlFSdj8wda79mq_",
+        "url": "YOUR_DISCORD_WEBHOOK_URL",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"content\": \"🚨 Uptime Alert\\nLead Management App is DOWN.\\nStatus Code: {{ $json.statusCode }}\"\n}",
@@ -51,10 +45,7 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
-      "position": [
-        496,
-        -144
-      ],
+      "position": [496, -144],
       "id": "efcdd1b2-6c87-4fac-8c5a-c51b6b980cdc",
       "name": "HTTP Request1"
     },
@@ -87,17 +78,14 @@
       },
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.3,
-      "position": [
-        288,
-        -16
-      ],
+      "position": [288, -16],
       "id": "e9686fd8-d816-40d1-8214-1d173568a4a5",
       "name": "If"
     },
     {
       "parameters": {
         "method": "POST",
-        "url": "https://discord.com/api/webhooks/1508899840564658220/-xLSt8rX80ra0ClZ7Nm6bKkNyGac6iIfQmFKKzTx90XsqMg2q-Jv_RlFSdj8wda79mq_",
+        "url": "YOUR_DISCORD_WEBHOOK_URL",
         "sendBody": true,
         "specifyBody": "json",
         "jsonBody": "={\n  \"content\": \"🚨 App Health Alert\\nURL: https://lead-management-delta-silk.vercel.app/\\nStatus: {{ $json.statusCode }}\\nResponse Time: {{ $json.headers['x-vercel-id'] || 'N/A' }}\"\n}",
@@ -105,10 +93,7 @@
       },
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
-      "position": [
-        480,
-        64
-      ],
+      "position": [480, 64],
       "id": "ed97492c-b947-4a8c-960a-ebb994a94e67",
       "name": "HTTP Request2"
     }
